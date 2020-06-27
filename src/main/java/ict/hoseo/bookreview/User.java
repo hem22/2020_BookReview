@@ -35,8 +35,6 @@ public class User {
 	@Column(length = 40, nullable = false)
 	private String password;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="user_name")
 	@Column(length = 30, nullable = false)
 	private String name; 		// 김혜미
 	
@@ -45,6 +43,10 @@ public class User {
 	
 	@Column(length = 50)
 	private String email;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="review_id")
+	private Review review;
 	
 	
 	

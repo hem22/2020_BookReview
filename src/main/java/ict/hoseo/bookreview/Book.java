@@ -43,12 +43,12 @@ public class Book {
 	@Column(nullable = false, name="book_t")
 	private String title;
 	
-	@OneToMany(mappedBy = "book", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
 	private List<BookAuthor> authors = new ArrayList<BookAuthor>();
 
 	private double price;	
 	
-	@OneToMany(mappedBy = "book")
-	private List<Review> reviews;
+	@OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
+	private List<Review> reviews = new ArrayList<Review>();
 
 }

@@ -41,8 +41,8 @@ public class ReviewBookTest {
 		
 		bookRepo.save(b);
 		authorRepo.save(a1);
-		bookAuthorRepo.save(ba);
-		bookAuthorRepo.save(BookAuthor.builder().book(b).author(a2).build());
+//		bookAuthorRepo.save(ba);
+//		bookAuthorRepo.save(BookAuthor.builder().book(b).author(a2).build());
 		
 //		User u1 = User.builder().id("test123").password("password").name("김혜미").build();
 //		User u2 = User.builder().id("test456").password("password").name("기매미").build();
