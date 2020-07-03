@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface AuthorRepository extends CrudRepository<Author, Integer> {
 	
-	List<Author> findByName(String author);
+	Author findByName(String name);
 	
 	List<Book> findAll(Pageable page);
 }

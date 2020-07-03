@@ -1,6 +1,4 @@
-package ict.hoseo.bookreview.config;
-
-import java.util.concurrent.ConcurrentMap;
+package ict.hoseo.bookreview.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,12 +8,13 @@ import ict.hoseo.bookreview.AuthorRepository;
 import ict.hoseo.bookreview.Author;
 
 @Component
-public class AuthorConverter implements Converter<Integer, Author>{
+public class AuthorConverter implements Converter<String, Author>{
+	
 	@Autowired
 	private AuthorRepository author_repo;
 	
 	@Override
-	public Author convert(Integer source) {
-		return author_repo.findById(source).get();
+	public Author convert(String source) {
+		return author_repo.findByName(source);
 	}
 }

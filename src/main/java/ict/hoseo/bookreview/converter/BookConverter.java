@@ -1,4 +1,4 @@
-package ict.hoseo.bookreview.config;
+package ict.hoseo.bookreview.converter;
 
 import java.util.concurrent.ConcurrentMap;
 

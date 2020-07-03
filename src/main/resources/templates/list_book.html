@@ -85,19 +85,17 @@
 			      <th>ID</th>
 			      <th>ISBN</th>
 			      <th>제목</th>
-			      <th>작가들</th>
+			      <th>작가들</th> 
 			      <th>가격</th>
-			     <!-- <th>리뷰수</th> -->
 			   </tr>
 			 </thead>
 			 <tbody>
-			   <tr th:each="book : ${books}">
-			      <th th:text="${book.id}">ID</th>
+			   <tr th:each="book : ${book}">
+			      <th th:text="${book.book_id}">ID</th>
 			      <th th:text="${book.isbn}">ISBN</th>
-			      <th th:text="${book.title}">제목</th>
-			      <th th:text="${book.author.name}">작가들</th>
+			      <th th:text="${book.book_t}">제목</th>
+			      <th th:text="${book.author.name}">작가들</th> 
 			      <th th:text="${book.price}">가격</th>
-			      <!--  <th th:text="${book.rcount}">리뷰 수</th> -->
 			   </tr>
 			 </tbody> 
 			</table>
@@ -113,7 +111,7 @@
                     <div class="footer-left">
                         <div class="footer-logo">
                             <a th:href="@{/}">
-                                <img th:src="@{/img/br_logo.png}" width="130px">
+                                <img th:src="@{/img/logo.png}" width="130px">
                             </a>
                         </div>
                         <ul>

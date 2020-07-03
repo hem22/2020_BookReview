@@ -17,8 +17,8 @@ public class BookController {
 	
 	@RequestMapping(path = "/addBook", method = RequestMethod.GET)
 	public String addbookF(ModelMap aa) {
-		aa.put("books", book_repo.findAll());
-		return "books";
+		aa.put("book", book_repo.findAll());
+		return "book";
 	}
 	
 	@RequestMapping(path = "/addBook", method = RequestMethod.POST)
