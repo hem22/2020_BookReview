@@ -15,15 +15,16 @@ public class BookController {
 	@Autowired
 	private BookRepository book_repo;
 	
-	@RequestMapping(path = "/addbook", method = RequestMethod.GET)
-	public String addForm(ModelMap mm) {
-		mm.put("books", book_repo.findAll());
+	@RequestMapping(path = "/addBook", method = RequestMethod.GET)
+	public String addbookF(ModelMap aa) {
+		aa.put("books", book_repo.findAll());
 		return "books";
 	}
 	
-	@RequestMapping(path = "/addbook", method = RequestMethod.POST)
-	public String add(Book athors) {
-		book_repo.save(athors);
-		return "redirect:add_book";
+	@RequestMapping(path = "/addBook", method = RequestMethod.POST)
+	public String addB(Book book) {
+		book_repo.save(book);
+		return "redirect:list_book";
 	}
+	
 }

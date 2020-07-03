@@ -22,4 +22,29 @@ public class MainController {
 	public String addReview(ModelMap mm) {
 		return "add_review";
 	}
+	
+	@RequestMapping(path = "/list_book", method = RequestMethod.GET)
+	public String listBook(ModelMap mm) {
+		return "list_book";
+	}
+	
+	@RequestMapping(path = "/login", method = RequestMethod.GET)
+	public String login(ModelMap mm) {
+		return "login";
+	}
+	
+	@RequestMapping(path = "/register", method = RequestMethod.GET)
+	public String register(ModelMap mm) {
+		return "register";
+	}
+	
+	@RequestMapping(path = "/review_list", method = RequestMethod.GET)
+	public String reviewList(ModelMap mm) {
+		return "review_list";
+	}
+	
+	@RequestMapping(path = "/add_author", method = RequestMethod.GET)
+	public String Adduthor(ModelMap mm) {
+		return "add_author";
+	}
 }
