@@ -38,9 +38,9 @@ public class MainController {
 		return "register";
 	}
 	
-	@RequestMapping(path = "/review_list", method = RequestMethod.GET)
+	@RequestMapping(path = "/list_review", method = RequestMethod.GET)
 	public String reviewList(ModelMap mm) {
-		return "review_list";
+		return "list_review";
 	}
 	
 	@RequestMapping(path = "/add_author", method = RequestMethod.GET)

@@ -74,31 +74,31 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>Register</h2>
-                        <form action="#">
+                        <form action="addUser" method="post">
                             <div class="group-input">
                                 <label for="username">UserID *</label>
-                                <input type="text" id="userid">
+                                <input type="text" name="id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="text" id="password">
+                                <input type="password" name="password">
                             </div>
                             <div class="group-input">
-                                <label for="username">Username *</label>
-                                <input type="text" id="username">
+                                <label for="username">User Name *</label>
+                                <input type="text" name="name">
                             </div>
                             <div class="group-input">
-                                <label for="username">User Phone number</label>
-                                <input type="text" id="phonenumber">
+                                <label for="phone">User Phone number (without -, Numbers only)</label>
+                                <input type="text" name="phone">
                             </div>
                             <div class="group-input">
-                                <label for="username">User E-Mail</label>
-                                <input type="text" id="email">
+                                <label for="email">User E-Mail</label>
+                                <input type="text" name="email">
                             </div>
                             <button type="submit" class="site-btn register-btn">REGISTER</button>
                         </form>
                         <div class="switch-login">
-                            <a href="./login.html" class="or-login">Or Login</a>
+                            <a th:href="@{login}" class="or-login">Or Login</a>
                         </div>
                     </div>
                 </div>

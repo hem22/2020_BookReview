@@ -29,7 +29,6 @@ public class User {
 	@Id
 	@GeneratedValue(generator = "seq_user")
 	@Column(length = 30, name="user_id")
-	
 	private String id;
 	
 	@Column(length = 40, nullable = false)
@@ -39,7 +38,7 @@ public class User {
 	private String name; 		// 김혜미
 	
 	@Column(length = 13)
-	private String phone;
+	private Integer phone;
 	
 	@Column(length = 50)
 	private String email;

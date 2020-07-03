@@ -52,8 +52,7 @@ public class Review {
 	// 리뷰 일시
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Column(nullable = false)
-	private Date date;
+	private Date releaseDate;
 	
 	// 작성자 이름
 	//@OneToMany(mappedBy = "review", fetch = FetchType.EAGER)
