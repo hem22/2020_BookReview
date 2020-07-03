@@ -47,4 +47,9 @@ public class MainController {
 	public String Adduthor(ModelMap mm) {
 		return "add_author";
 	}
+	
+	@RequestMapping(path = "review_content", method = RequestMethod.GET)
+	public String reviewContent(ModelMap mm) {
+		return "review_content";
+	}
 }

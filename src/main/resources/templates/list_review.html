@@ -90,9 +90,9 @@
 			   <tr th:each="review : ${reviw}">
 			      <th th:text="${review.book.title}">title</th>
 			      <th th:text="${review.grade}">grade</th>
-			      <th th:text="${review.user.name}">username</th>
+			      <th th:text="${review.user.name}">name</th>
 			      <th th:text="${review.relaseDate}">date</th> 
-			      <th th:text="${review.content}">review</th>
+			     <a th:herf="@{review_content}"></a><th th:text="${review.content}">review</th></a>
 			   </tr>
 			 </tbody> 
 			</table>

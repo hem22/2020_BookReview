@@ -11,18 +11,16 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" type="text/css">
+   <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/themify-icons.css}" type="text/css">
-    <link rel="stylesheet" th:href="@{/css/elegant-icons.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/nice-select.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/jquery-ui.min.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/slicknav.min.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
-
 </head>
+
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -52,9 +50,57 @@
         </div>
     </header>
     <!-- Header End -->
-    
-    
-    
+
+    <!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <a th:href="@{/}"><i class="fa fa-home"></i> Home</a>
+                        <span>Register</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Form Section Begin -->
+
+    <!-- Register Section Begin -->
+    <div class="register-login-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="register-form">
+                        <h2>Review</h2>
+                            <div class="group-input">
+                                <label for="book">Book Title *</label>
+                                <input type="text" name="title" th:value="${review.book.title}" disabled></input>
+                            </div>
+                            <div class="group-input">
+                                <label for="gread">Grade *</label>
+                                <input type="text" name="grade" th:value="${review.grade}" disabled>
+                            </div>
+                            <div class="group-input">
+                                <label for="username">User name *</label>
+                                <input type="text" name="user" th:value="${review.user.name}" disabled>
+                            </div>
+                            <div class="group-input">
+                                <label for="date">Date</label>
+                                <input type="text" name="releaseDate" th:value="${review.releaseDate}" disabled>
+                            </div>
+                            <div class="group-input">
+                                <label for="content">content</label>
+                                <textarea cols="60" rows="10" name="content" th:value="${review.content}" disabled></textarea>
+                            </div>
+                            <button type="submit" class="site-btn register-btn">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Form Section End -->
+
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -62,7 +108,7 @@
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                             <a th:href="@{/}">
+                           <a th:href="@{/}">
                                 <img th:src="@{/img/logo.png}" width="130px">
                             </a>
                         </div>
@@ -126,4 +172,3 @@
 </body>
 
 </html>
-    
