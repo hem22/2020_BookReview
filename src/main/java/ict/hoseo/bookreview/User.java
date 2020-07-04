@@ -27,7 +27,6 @@ import lombok.NoArgsConstructor;
 })
 public class User {
 	@Id
-	@GeneratedValue(generator = "seq_user")
 	@Column(length = 30, name="user_id")
 	private String id;
 	
